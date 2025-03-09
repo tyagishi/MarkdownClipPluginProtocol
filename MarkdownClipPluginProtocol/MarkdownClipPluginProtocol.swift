@@ -9,10 +9,9 @@ import Foundation
 
 public protocol MarkdownClipGeneralProtocol {
     init()
+    var name: String { get }
 }
 
-
 public protocol MarkdownClipTextPlugin: MarkdownClipGeneralProtocol {
-    var name: String { get }
-    func editText(text: String, at: String.Index) -> String
+    func editText(text: String, at: String.Index) -> (newText: String, replace: Range<String.Index>, cursorAt: String.Index?)
 }
