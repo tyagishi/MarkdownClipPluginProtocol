@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import SwiftUI
+import SDSMarkdownEditView
 
 public protocol MarkdownClipGeneralProtocol {
     init()
@@ -14,4 +16,12 @@ public protocol MarkdownClipGeneralProtocol {
 
 public protocol MarkdownClipTextPlugin: MarkdownClipGeneralProtocol {
     func editText(text: String, at: String.Index) -> (newText: String, replace: Range<String.Index>, cursorAt: String.Index?)
+}
+
+public protocol MarkdownClipGUIPlugin: MarkdownClipGeneralProtocol {
+    var textViewModel: MarkdownTextViewModel? { get set }
+
+    @MainActor
+    @ViewBuilder
+    func sheet() -> AnyView
 }

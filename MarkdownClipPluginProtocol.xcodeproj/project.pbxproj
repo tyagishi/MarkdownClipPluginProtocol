@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3652ABE22D7D279E007BD1C9 /* MarkdownClipPluginProtocol.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3652AB902D7D2393007BD1C9 /* MarkdownClipPluginProtocol.framework */; };
 		3652ABE32D7D279E007BD1C9 /* MarkdownClipPluginProtocol.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3652AB902D7D2393007BD1C9 /* MarkdownClipPluginProtocol.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		366C11312DAFD57D000CEE7B /* SDSMarkdownEditView in Frameworks */ = {isa = PBXBuildFile; productRef = 366C11302DAFD57D000CEE7B /* SDSMarkdownEditView */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				366C11312DAFD57D000CEE7B /* SDSMarkdownEditView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,6 +136,7 @@
 			);
 			name = MarkdownClipPluginProtocol;
 			packageProductDependencies = (
+				366C11302DAFD57D000CEE7B /* SDSMarkdownEditView */,
 			);
 			productName = MarkdownClipPluginProtocol;
 			productReference = 3652AB902D7D2393007BD1C9 /* MarkdownClipPluginProtocol.framework */;
@@ -190,6 +193,9 @@
 			);
 			mainGroup = 3652AB862D7D2393007BD1C9;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				366C112F2DAFD57D000CEE7B /* XCRemoteSwiftPackageReference "SDSMarkdownEditView" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 3652AB912D7D2393007BD1C9 /* Products */;
 			projectDirPath = "";
@@ -523,6 +529,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		366C112F2DAFD57D000CEE7B /* XCRemoteSwiftPackageReference "SDSMarkdownEditView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/tyagishi/SDSMarkdownEditView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		366C11302DAFD57D000CEE7B /* SDSMarkdownEditView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 366C112F2DAFD57D000CEE7B /* XCRemoteSwiftPackageReference "SDSMarkdownEditView" */;
+			productName = SDSMarkdownEditView;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3652AB872D7D2393007BD1C9 /* Project object */;
 }
